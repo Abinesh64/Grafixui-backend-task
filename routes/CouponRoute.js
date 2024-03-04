@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {postCoupon, getCoupons, getCoupon, deleteCoupon, updateCoupon} = require('../controllers/couponController');
+const {postCoupon, getCoupons, getCoupon, deleteCoupon, updateCoupon} = require('../controllers/CouponController');
 
 
 router.post('/', postCoupon);

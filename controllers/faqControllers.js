@@ -1,4 +1,4 @@
-const Faq = require("../models/Faq");
+const Faq = require("../models/FaqModels");
 
 const postFaq = async (req, res) => {
     try {

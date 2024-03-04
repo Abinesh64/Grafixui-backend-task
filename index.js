@@ -3,16 +3,16 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require('cors');
-const bannerRoute = require("./routes/banner")
-const couponRoute = require("./routes/coupon")
-const faqRoute = require("./routes/faq");
-const movieRoute = require("./routes/movie");
-const eventRoute = require("./routes/event");
-const OrderRouter = require('./routes/OrderRouter')
-const PromoDetailRouter = require('./routes/PromoDetailRouter')
-const ReviewRouter = require('./routes/ReviewRouter')
-const TicketDetailRouter = require('./routes/TicketDetailRouter')
-const UserRouter = require('./routes/UserRouter')
+const BannerRoute = require("./routes/BannerRoute");
+const CouponRoute = require("./routes/CouponRoute");
+const FaqRoute = require("./routes/FaqRoute");
+const MovieRoute = require("./routes/MovieRoute");
+const EventRoute = require("./routes/EventRoute");
+const OrderRouter = require('./routes/OrderRouter');
+const PromoDetailRouter = require('./routes/PromoDetailRouter');
+const ReviewRouter = require('./routes/ReviewRouter');
+const TicketDetailRouter = require('./routes/TicketDetailRouter');
+const UserRouter = require('./routes/UserRouter');
 
 dotenv.config();
 
@@ -23,11 +23,11 @@ app.use(cors());
 app.use(express.json());
 
 // Abinesh work
-app.use("/api/banner",bannerRoute);
-app.use("/api/coupon",couponRoute);
-app.use("/api/faq",faqRoute);
-app.use("/api/movie",movieRoute);
-app.use("/api/event",eventRoute);
+app.use("/api/banner",BannerRoute);
+app.use("/api/coupon",CouponRoute);
+app.use("/api/faq",FaqRoute);
+app.use("/api/movie",MovieRoute);
+app.use("/api/event",EventRoute);
 
 //manickavasagam work
 app.use('/api/Order', OrderRouter)

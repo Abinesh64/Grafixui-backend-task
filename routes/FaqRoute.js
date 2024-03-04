@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {postFaq, getFaqs, getFaq, deleteFaq, updateFaq} = require('../controllers/faqControllers');
+const {postFaq, getFaqs, getFaq, deleteFaq, updateFaq} = require('../controllers/FaqControllers');
 
 router.post('/', postFaq);
 

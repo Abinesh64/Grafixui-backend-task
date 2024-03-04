@@ -1,4 +1,4 @@
-const Banner = require("../models/Banner");
+const Banner = require("../models/BannerModels");
 const mongoose = require("mongoose");
 
 

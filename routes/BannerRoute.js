@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {postBanner, getBanners, getBanner, deleteBanner, updateBanner} = require('../controllers/bannerController');
+const {postBanner, getBanners, getBanner, deleteBanner, updateBanner} = require('../controllers/BannerController');
 
 
 router.post('/', postBanner);
