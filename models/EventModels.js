@@ -1,4 +1,6 @@
 const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
+
 const EventSchema = new mongoose.Schema({
     eventtitle : {
         type: String, 
@@ -83,6 +85,7 @@ const EventSchema = new mongoose.Schema({
         type: Number, 
         required: true
     },
+    user: { type: Schema.Types.ObjectId, ref: 'User' }
 },{ timestamps: true}
 );
 

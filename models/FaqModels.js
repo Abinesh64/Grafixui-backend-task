@@ -1,4 +1,6 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
 const FaqSchema = new mongoose.Schema({
     eventid : {
         type: Number, 
@@ -17,7 +19,8 @@ const FaqSchema = new mongoose.Schema({
         type: Number, 
         required: true, 
         unique: true
-    }
+    },
+    user: { type: Schema.Types.ObjectId, ref: 'User' }
 },{ timestamps: true}
 );
 

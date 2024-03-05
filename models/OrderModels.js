@@ -46,8 +46,8 @@ const OrderSchema = new Schema({
     movieid: {
         type: Number,
         required: true
-    }
-
+    },
+    user: { type: Schema.Types.ObjectId, ref: 'User' }
 
 }, { timestamps: true })
 

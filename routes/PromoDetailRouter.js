@@ -8,18 +8,24 @@ router.get('/',getPromodetails)
 
 router.get('/:id',getPromodetail)
 
+router.post('/',createPromodetails)
 
-router.post('/',(req,res)=>{
-  res.json({msg:"To add"})
-})
-
-router.delete('/',(req,res)=>{
-  res.json({msg:"To add"})
-})
+router.delete('/:id', deletePromodetail)
 
 
-router.patch('/',(req,res)=>{
-  res.json({msg:"To add"})
-})
+router.patch('/:id',updatePromodetail)
+
+// router.post('/',(req,res)=>{
+//   res.json({msg:"To add"})
+// })
+
+// router.delete('/',(req,res)=>{
+//   res.json({msg:"To add"})
+// })
+
+
+// router.patch('/',(req,res)=>{
+//   res.json({msg:"To add"})
+// })
 
 module.exports = router

@@ -50,16 +50,13 @@ const   UserSchema = new Schema({
         required: true
     },
     likedevent: {
-        type: String,
+        type: [String],
         required: true
     },
     likedmovie: {
-        type: String,
+        type: [String],
         required: true
     },
-
-
-
 }, { timestamps: true })
 
 module.exports = mongoose.model('User', UserSchema)

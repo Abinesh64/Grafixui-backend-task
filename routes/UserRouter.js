@@ -1,8 +1,7 @@
 const express = require('express')
-const {getUser, getUsers, updateUser, deleteUser, createUser} = require('../controllers/UserControllers')
-
 const router = express.Router()
-
+const {getUser, getUsers, updateUser, deleteUser, createUser} = require('../controllers/UserControllers')
+const {verifyAdmin} = require("./VerifyUserAccess");
 
 router.get('/', getUsers)
 
@@ -10,8 +9,8 @@ router.get('/:id', getUser)
 
 router.post('/', createUser)
 
-router.delete('/', deleteUser)
+router.delete('/:id', verifyAdmin, deleteUser)
 
-router.patch('/', updateUser)
+router.patch('/:id', updateUser)
 
 module.exports = router

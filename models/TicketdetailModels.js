@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema
 
 const TicketdetailSchema = new Schema({
@@ -22,7 +21,8 @@ const TicketdetailSchema = new Schema({
     quantity: {
         type: Number,
         required: true
-    }
+    },
+    user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true })
 
 module.exports = mongoose.model('Ticketdetail', TicketdetailSchema)

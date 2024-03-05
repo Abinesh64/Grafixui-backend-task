@@ -1,7 +1,6 @@
 const Banner = require("../models/BannerModels");
 const mongoose = require("mongoose");
 
-
 const postBanner = async (req, res) => {
     try {
         const newBanner = new Banner(req.body);
@@ -24,7 +23,7 @@ const getBanners = async (req, res) => {
 
 const getBanner = async(req, res)=>{
     try{
-        const banner = await Banner.findOne({_id : req.params._id})
+        const banner = await Banner.findOne({_id : req.params._id});
         res.status(200).json(banner);
     }
     catch(err){
